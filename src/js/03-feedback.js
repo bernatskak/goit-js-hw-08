@@ -17,6 +17,9 @@ function onFormSumbit(e) {
   e.preventDefault();
   e.currentTarget.reset();
   localStorage.removeItem(STORAGE_KEY);
+  if (refs.email.value === '' || refs.message.value === '') {
+    return alert('Please fill in all the fields!');
+  }
 }
 
 function onEmailInput(e) {
