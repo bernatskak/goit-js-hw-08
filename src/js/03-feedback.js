@@ -15,9 +15,10 @@ function onFormSumbit(e) {
   if (email.value === '' || message.value === '') {
     return alert('Please fill in all the fields!');
   }
-  localStorage.removeItem(STORAGE_KEY);
+
   e.currentTarget.reset();
   clearFormData(formData);
+  localStorage.removeItem(STORAGE_KEY);
 }
 function clearFormData(obj) {
   for (const key in obj) {
