@@ -25,7 +25,6 @@ function clearFormData(obj) {
     delete obj[key];
   }
 }
-
 function onEmailInput(e) {
   formData[e.target.name] = e.target.value;
   localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
@@ -38,11 +37,9 @@ function getStorageData() {
     formData = {};
   }
 }
-
 function setFormFields(obj) {
   for (const key in obj) {
     refs.form[key].value = obj[key];
   }
 }
-
 window.addEventListener('load', getStorageData);
