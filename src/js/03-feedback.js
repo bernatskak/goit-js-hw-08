@@ -42,4 +42,5 @@ function setFormFields(obj) {
     refs.form[key].value = obj[key];
   }
 }
+
 window.addEventListener('load', getStorageData);
